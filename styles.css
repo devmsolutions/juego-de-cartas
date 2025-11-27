@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0c4b33;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.instructions {
+  font-style: italic;
+  margin-top: -10px;
+}
+
+.game-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  max-width: 800px;
+  background-color: #0a3a27;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.player-zone {
+  text-align: center;
+  flex: 1;
+}
+
+.card-slot {
+  width: 120px;
+  height: 180px;
+  border: 2px dashed #4a7c6a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.card {
+  width: 120px;
+  height: 180px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.card-back {
+  width: 120px;
+  height: 180px;
+  background-color: #1e3a8a;
+  border: 5px solid #a0aec0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-image: radial-gradient(#60a5fa 15%, transparent 16%);
+  background-size: 10px 10px;
+}
+
+.card.red {
+  color: #d90429;
+}
+.card.black {
+  color: #000000;
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: normal;
+  content: attr(data-value) " " attr(data-suit);
+}
+.card::before {
+  top: 10px;
+  left: 10px;
+}
+.card::after {
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(180deg);
+}
+
+.game-controls {
+  text-align: center;
+  flex: 1;
+  padding: 0 20px;
+}
+
+#result-text {
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.button-group button {
+  background-color: #fca311;
+  color: #14213d;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin: 5px;
+}
+
+.button-group button:hover {
+  background-color: #e85d04;
+}
+
+#next-round-button {
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+#next-round-button:hover {
+  background-color: #264653;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Juego de cartas Alta o baja</title>
+  </head>
+  <body>
+    <h1>Alta o Baja</h1>
+    <p class="instructios">
+      Tu carta esta a la derecha. Sera la carta de la computadora mas alta o
+      baja que la tuya?
+    </p>
+    <div class="game-container">
+      <div class="player-zone">
+        <h2>Computadora</h2>
+        <div class="card-slot" id="cpu-card-slot"></div>
+      </div>
+
+      <div class="game-controls">
+        <h3 id="result-text">Haz tu apuesta!</h3>
+        <div class="button-group">
+          <button id="higher-button">Mas alto</button>
+          <button id="lower-button">Mas bajo</button>
+        </div>
+        <button id="next-round-button" class="hidden">Siguiente Ronda</button>
+        <p>Cartas restantes: <span id="deck-count">52</span></p>
+      </div>
+      <div class="player-zone">
+        <h2>Jugador</h2>
+        <div class="card-slot" id="player-card-slot"></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
